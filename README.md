@@ -1,10 +1,12 @@
 # Taddy API Podcast Dataset Sample
 
-This is a sample of the Taddy API Podcast Dataset. It contains 14929 podcasts and 10544 episodes. The full dataset contains 4+ million podcasts and 130+ million episodes. If you want to purchase the full dataset, please contact [danny@taddy.org](mailto:danny@taddy.org).
+This is a sample of the Taddy API Podcast Dataset. It contains 14,929 podcasts and 10,544 episodes. The full dataset contains 4+ million podcasts and 130+ million episodes and is ~70GB in size.
+
+If you want to purchase the full dataset, please contact [danny@taddy.org](mailto:danny@taddy.org).
 
 ## Data Format
 
-The data is in Parquet format. There are libraries for reading Parquet files in most programming languages.
+This project contains 2 files in Parquet format. There are libraries for reading Parquet files in most programming languages.
 
 ## Table Definitions
 
