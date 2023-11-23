@@ -10,7 +10,7 @@ This project contains 2 files in Parquet format. There are libraries for reading
 
 ## Table Definitions
 
-Podcast Series Table
+Podcast Series Table - For documentation on the fields, see the [PodcastSeries](https://taddy.org/developers/podcast-api/podcastseries)
 
 ```sql
 CREATE TABLE podcastseries (
@@ -45,7 +45,7 @@ CREATE TABLE podcastseries (
 );
 ```
 
-Podcast Episode Table
+Podcast Episode Table - For documentation on the fields, see the [PodcastEpisode](https://taddy.org/developers/podcast-api/podcastepisode)
 
 ```sql
 CREATE TABLE podcastepisode (
