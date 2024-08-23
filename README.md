@@ -1,6 +1,6 @@
 # Taddy API Podcast Dataset Sample
 
-This sample contains 14,929 podcasts and 10,544 episodes from the Taddy Podcast API Dataset. The full dataset contains 4+ million podcasts and 130+ million episodes and is ~70GB in size.
+This sample contains 14,929 podcasts and 10,544 episodes from the Taddy Podcast API Dataset. The full dataset contains 4+ million podcasts and 170+ million episodes and is ~70GB in size.
 
 If you want to purchase the full dataset, please contact [danny@taddy.org](mailto:danny@taddy.org).
 
