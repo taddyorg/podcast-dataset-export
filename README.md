@@ -1,12 +1,12 @@
 # Taddy API Podcast Dataset Sample
 
-This sample contains 14,929 podcasts and 10,544 episodes from the Taddy Podcast API Dataset. The full dataset contains 4+ million podcasts and 170+ million episodes and is ~70GB in size.
+This sample contains 14,929 podcasts and 10,544 episodes from the Taddy Podcast API Dataset. The full dataset contains 4+ million podcasts and 180+ million episodes and is ~80GB in size.
 
 If you want to purchase the full dataset, please contact [danny@taddy.org](mailto:danny@taddy.org).
 
 ## Data Format
 
-This project contains 2 files in Parquet format. There are libraries for reading Parquet files in most programming languages.
+This project contains 4 files in Parquet format.
 
 ## Table Definitions
 
@@ -76,5 +76,38 @@ CREATE TABLE podcastepisode (
     is_removed boolean,
     series_hash character varying(255),
     is_blocked boolean
+);
+```
+
+Genre Table - Lists the genre that a podcast belongs to. A podcast can have up to 5 genres. For possible genre values, see the [Genre](https://taddy.org/developers/podcast-api/genre). You do not need to have a genre table, but can add a column to the podcast series table to store the genres. We use this table internally for historical reasons.
+
+```sql
+CREATE TABLE genres (
+    id BIGSERIAL PRIMARY KEY,
+    created_at timestamp with time zone NOT NULL DEFAULT now(),
+    updated_at timestamp with time zone,
+    uuid uuid NOT NULL,
+    genre character varying(255) NOT NULL,
+    taddy_type character varying(255) NOT NULL,
+    position integer
+);
+```
+
+iTunes Info Table -  For documentation on the fields, see the [iTunesInfo](https://taddy.org/developers/podcast-api/itunesinfo)
+
+```sql
+CREATE TABLE itunes_info (
+    id BIGSERIAL,
+    created_at timestamp with time zone NOT NULL DEFAULT now(),
+    updated_at timestamp with time zone,
+    uuid uuid PRIMARY KEY,
+    hash character varying(255),
+    hash_timestamp bigint,
+    subtitle text,
+    summary text,
+    base_artwork_url text,
+    country character varying(255),
+    publisher_id bigint,
+    publisher_name character varying(255)
 );
 ```
