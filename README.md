@@ -79,7 +79,7 @@ CREATE TABLE podcastepisode (
 );
 ```
 
-Genre Table - Lists the genres that a podcast belongs to. A podcast can have up to 5 genres. For possible genre values, see the [Genre](https://taddy.org/developers/podcast-api/genre). You do not need to have a genre table, but can add a column to the podcast series table to store the genres. We use this table internally for historical reasons.
+Genre Table - Lists the genres that a podcast belongs to. A podcast can have up to 5 genres. For possible genre values, see the [Genre](https://taddy.org/developers/podcast-api/genre). You do not need to have your own genre table, but can add a column to the podcast series table to store the genres if you choose. We use this table internally for historical reasons.
 
 ```sql
 CREATE TABLE genres (
